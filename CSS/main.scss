@@ -1,0 +1,1071 @@
+
+
+/* FONT */
+
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import "mixins.scss";
+
+
+    /* Color Primary */
+    $purple:  #9356DC;
+
+    /* Color Secondary */
+    $pink: #FF79DA;
+
+    /* Color tertiary */
+    $feathergreen: #99E2D0;
+
+    /* Color Neutral */
+    $white: hsl(0, 0%, 100%);
+    $Softgrey: hsl(0, 0%, 97%);
+    $darkengrey: hsl(0, 0%, 92%);
+
+    /* focus color */
+    $softpurple: hsl(267, 100%, 96%);
+
+    /* elements */
+    $line: hsl(165, 54%, 78%);
+    $softpurple: hsl(267, 100%, 96%);
+
+    /* gradient */ 
+    $gradient: rgb(159,90,220);
+    $gradientloader1: linear-gradient(300deg, rgba(153,226,208,1) 0%, rgba(255,121,218,1) 100%);
+    $gradientloader2: linear-gradient(300deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+    $gradientloader3: linear-gradient(17deg, rgba(153,226,208,1) 0%, rgba(162,97,240,1) 100%);
+
+
+
+
+
+
+
+/* Universal style (CCS RESET) */
+@include CSSreset;
+
+
+/* FONT */
+
+$font-primary: "roboto";
+
+/* Background */
+$shadow: rgba(33, 35, 38, 0.3) 0px 3px 5px 0px;
+
+
+/* LOADER */
+
+
+.index {
+    animation: disappear 14s ;
+    opacity: 1;
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 0;
+        height: 0px;
+    }
+
+    80% {
+        opacity: 0;
+        height: 0xp;
+    }
+    
+
+    100% {
+
+        height: 100%;
+        opacity: 1;
+    }
+
+}
+
+.loader {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    @include Logo-sizing;
+    font-size: 50px;
+    position: relative;
+    animation: slide_up 13s forwards;
+
+    .letters {
+
+        width: 200px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+}
+
+@keyframes slide_up {
+
+    0% {
+        height: 500px;
+    }
+
+    80% {
+        height: 500px;
+    }
+
+    100% {
+        height: 0px;
+    }
+    
+}
+
+.fa-spoon {
+    position: absolute;
+    font-size: 50px;
+    opacity: 0;
+    animation: spoon 3s cubic-bezier(.17,.84,.38,1.09) infinite;
+    animation-iteration-count: 3;
+
+}
+
+.fa-fire {
+    position: absolute;
+    font-size: 50px;
+    opacity: 0;
+    animation: fire 3s cubic-bezier(.17,.84,.38,1.09) infinite;
+    animation-iteration-count: 3;
+    animation-delay: 1s;
+    animation-duration: 3s;
+
+}
+
+.fa-pepper-hot {
+    position: absolute;
+    font-size: 50px;
+    opacity: 0;
+    animation: pepper 3s cubic-bezier(.17,.84,.38,1.09) infinite;
+    animation-iteration-count: 3;
+    animation-delay: 2s;
+    animation-duration: 3s;
+
+}
+
+
+
+@keyframes spoon {
+
+    0% {
+        
+        opacity: 0;
+        transform: translate(0,-20px) rotate(0deg);
+
+    }
+
+    33% {
+        color: $purple;
+        opacity: 1;
+
+    }
+
+    45% {
+        color: $pink;
+        transform: translate(50px,-100px) rotate(-450deg);
+        opacity: 0;
+    }
+
+    100% {
+
+    }
+
+
+}
+
+@keyframes fire {
+
+    0% {
+        color: $feathergreen;
+        transform: translate(0,-20px) rotate(0deg);
+
+    }
+
+    33% {
+        color: $pink;
+        opacity: 1;
+
+    }
+
+    45% {
+        color: $feathergreen;
+        transform: translate(-90px,70px) rotate(312deg);
+        opacity: 0;
+    }
+
+    100% {
+
+    }
+
+
+}
+
+@keyframes pepper {
+
+    0% {
+        color: $purple;
+        transform: translate(0,-20px) rotate(0deg);
+
+    }
+
+    33% {
+        color: $feathergreen;
+        opacity: 1;
+
+    }
+
+    45% {
+        color: $purple;
+        transform: translate(-90px,-120px) rotate(312deg);
+        opacity: 0;
+    }
+
+    100% {
+
+    }
+
+
+}
+
+
+
+
+
+.oh {
+    position: absolute;
+    background-image: $gradientloader1;
+    background-size: 400%;
+    background-clip: text;
+    color: transparent;
+
+    opacity: 0;
+    animation: loader1 1s ease-in-out infinite;
+    animation-iteration-count: 3;
+    animation-duration: 3s;
+}
+
+.my {
+    position: absolute;
+    background-image: $gradientloader2;
+    background-size: 400%;
+    background-clip: text;
+    color: transparent;
+
+    opacity: 0;
+    animation: loader2 1s ease-in-out infinite;
+    animation-iteration-count: 3;
+    animation-delay: 1s;
+    animation-duration: 3s;
+}
+
+.food {
+    position: absolute;
+    background-image: $gradientloader3;
+    background-size: 600%;
+    background-clip: text;
+    color: transparent;
+
+    opacity: 0;
+    animation: loader3 1s ease-in-out infinite;
+    animation-iteration-count: 3;
+    animation-delay: 2s;
+    animation-duration: 3s;
+}
+
+
+// @for $i from 1 through 10 {
+//     .letters:nth-child(#{$i}n) {
+//         animation-delay: #{$i * 1}s;
+//     }
+
+// }
+
+
+
+@keyframes loader1 {
+    0% {
+        transform: rotate(0deg);
+        transform: scale(1);
+        opacity: 0;
+        background-position: left;
+    }
+
+    15% {
+        transform: scale(1.5);
+        opacity: 1;
+        background-position: right;
+    }
+
+    
+    20% {
+        transform: scale(1.0);
+        opacity: 1;
+        background-position: right;
+    }
+
+    33% {
+        transform: scale(1.5);
+        opacity: 1;
+        background-position: right;
+    }
+
+    34% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotate(50deg);
+        transform: scale(1.5);
+        opacity: 0;
+    }
+
+}
+
+@keyframes loader2 {
+    0% {
+        transform: scale(1);
+        opacity: 0;
+        background-position: left;
+    }
+
+    15% {
+        transform: scale(1.3);
+        opacity: 1;
+        background-position: right;
+    }
+
+    
+    20% {
+        transform: scale(1.0);
+        opacity: 1;
+        background-position: right;
+    }
+
+
+    33% {
+        transform: scale(1.5);
+        opacity: 1;
+        background-position: right;
+    }
+
+    34% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+
+}
+
+@keyframes loader3 {
+    0% {
+        transform: scale(1);
+        opacity: 0;
+        background-position: left;
+    }
+
+    15% {
+        transform: scale(1.5);
+        opacity: 1;
+        background-position: right;
+    }
+
+    
+    20% {
+        transform: scale(1.0);
+        opacity: 1;
+        background-position: right;
+    }
+
+
+    33% {
+        transform: scale(1.5);
+        opacity: 1;
+        background-position: right;
+    }
+
+    34% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+
+}
+
+/* LAYOUT */
+
+.logo_header {
+    @include Logo-sizing;
+    @include Box-sizing;
+    background-color: $white;
+    box-shadow: $shadow;
+    position: relative;
+    z-index: 3;
+}
+
+/* LOCATION */
+
+.location {
+    @include Box-sizing;
+    background-color: darken($Softgrey, 5);
+   
+    >p {
+        @include Font-size-medium;
+        margin: 0 10px;
+        font-weight: 500;
+    }
+
+}
+
+/* EXPLORATION */
+
+.exploration {
+    @include Box-sizing;
+    flex-direction: column;
+    text-align: center;
+    height:fit-content;
+    padding: 40px 10%;
+    background-color: $Softgrey;
+
+    >h2, p, a {
+        margin-bottom: 15px;
+    }
+
+    >h2 {
+        @include Font-size-very-big;
+
+    }
+
+    > p {
+        @include Font-size-medium;
+        font-weight: 300;
+    }
+
+}
+
+
+/* BOUTON */
+
+.bouton {
+    @include Bouton;
+    @include Font-size-medium;
+    @include Gradient_kit;
+    color: $white;
+    margin-top: 15px;
+    font-weight: 500;
+    box-shadow:$shadow;
+
+    &:hover {
+    @include over-bouton; 
+
+    }
+}
+
+
+
+/* FONTIONNEMENT */
+
+.fonction h2 {
+    @include Font-size-very-big;
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+
+
+
+.fonction {
+    height: 400px;
+    display: flex;
+
+    flex-direction: column;
+    padding: 40px 20px 0 0;
+
+    .fontion__container {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    
+
+        .fonction__container__card {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            position: relative;
+
+
+            .fonction__container__card__description {
+                @include Card-li;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: $softpurple;
+                    
+                    
+                }
+
+                &:hover i {
+                    color: #9356DC
+                }
+                
+            }
+        
+        }
+        
+    }
+
+}
+
+
+
+
+
+
+.number {
+    @include number-shape;    
+    @include Font-size-medium;
+    @if (lightness($purple) > 50%) {
+        color: #fff;        
+    } @else {
+        color: #000;
+    }
+}
+
+.fonction__container__card__description > p {
+    @include Font-size-medium;
+    font-weight: 500;
+}
+
+.fonction__container__card__description .fa-solid {
+    margin-right: 20px;
+    font-size: 20px;
+    color: darken($Softgrey, 50);
+}
+
+
+/* RESTAURANT */
+
+.container__restaurant h2 {
+    @include Font-size-very-big;
+    margin-bottom: 30px;
+    padding-left: 0px;
+}
+
+.container__restaurant__card {
+    height: fit-content;
+}
+
+.container__restaurant {
+    max-width: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px 0 20px;
+    background-color: $Softgrey;
+
+    .container__restaurant__card {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        .card_restaurant {
+            width: 350px;
+            border-radius: 20px;
+            margin: 20px;
+            box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+            position: relative;
+
+
+        }
+
+    }
+
+}
+
+.card_restaurant > img {
+    @include Picture-Treatment;
+    width: 100%;
+        
+}
+
+.card_information {
+    @include Card-restaurant;
+    @include Font-size-medium;
+
+   
+    .nom_restaurant {
+        margin-bottom: 5px;
+   }
+
+   P {
+    font-weight: 400;
+    }
+
+}
+
+.restaurant_description {
+
+    &:hover .img_restaurant {
+
+        @include over-bouton;
+    }
+}
+
+
+// .heart-animation {
+//     position: relative;
+// }
+
+.heart-container {
+
+    width: 50px;
+    height: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    &:hover .liked-heart-background {
+        animation: like 1s ease-in-out forwards;
+    }
+}
+
+
+
+@keyframes like {
+    0% {
+        color: $white;
+        opacity: 0;
+        transform: scale(0.0);
+    }
+
+    75% {
+        color: $gradient;
+        opacity: 1;
+        transform: scale(1.3);
+    }
+
+    85% {
+        opacity: 1;
+        transform: scale(0.3);
+    }
+
+    100% {
+        color: $gradient;
+        opacity: 1;
+        transform: scale(1.0);
+    }
+
+}
+
+
+.liked-heart {
+    position: absolute;
+    font-size: 25px;
+    // right: 10%;
+       
+}
+
+.liked-heart-background {
+    opacity: 0;
+    position: absolute;
+    font-size: 25px;
+    // right: 10%;
+             
+}
+
+.titre_container {
+    .liked-heart-background {
+        top: 5%
+    }
+}
+
+
+.nouveau {
+    @include Nouveau;
+    @include Font-size-medium;
+    font-weight: 700px;
+    
+}
+
+
+
+/* FOOTER */
+
+
+footer {
+    padding: 30px 20px 20px 20px;
+    background-color: darken($darkengrey, 70);
+    @if (lightness($darkengrey) > 50%) {
+        color: #fff;        
+    } @else {
+        color: #000;
+    }
+
+    .logo_footer {
+        @include Logo-sizing;
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .footer_ico {
+        display: flex;
+        
+        
+    }
+
+    li {
+        @include Font-size-medium;
+        margin: 10px 0;
+    }
+
+}
+
+ul li i {
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* PAGE RESTAURANTS */
+
+
+
+.header_page_2 {
+    @include Box-sizing;
+    
+
+    .fa-arrow-left {
+        width: 33%;
+        font-size: 20px;
+        padding: 0 20px;
+    
+    }
+    
+    .logo_header_pages {
+        @include Logo-sizing;
+        display: flex;
+        justify-content:center ;
+        width: 33%;
+    
+    }
+
+    .empty-space {
+        width: 33%;
+    }
+
+}
+
+
+.image_sub_header {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+
+}
+
+
+/* ARTICLE */
+
+.article_container {
+    background-color: $Softgrey;
+    padding: 30px 20px;
+    border-radius: 30px 30px 0 0 ;
+    position: relative;
+    top: -40px;
+    
+
+    h2 {
+        @include Font-size-medium;
+        font-weight: 200;
+    }
+}
+
+.titre_container {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    padding-right: 30px;
+    margin-bottom: 20px;
+
+    i {
+        font-size: 25px;
+        transform: translateY(-7px)
+    }
+}
+
+
+
+/* MENU */
+
+
+
+@media (min-width: 914px) {
+        .container_menu {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content:space-between;
+                       
+        }
+
+        .container_card_menu {
+            width: 90%
+        }
+}
+
+
+.price {
+    @include Font-size-very-big;
+    font-weight: 500;
+    
+
+}
+
+
+    
+
+/* ENTREE */ 
+.container_entrées {
+    margin-bottom: 50px;
+    width: 100%
+
+}
+
+.container_plats {
+    width: 100%
+
+}
+
+.container_desserts {
+    width: 100%
+
+}
+
+
+
+
+
+.titre {
+    @include Logo-sizing;
+   
+}
+
+
+.line {
+    margin: 5px 0 10px 0;
+    width: 45px;
+    height: 3px;
+    background-color: $line;
+}
+
+.container_card_menu {
+    opacity: 0;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: $shadow;
+
+
+     &:hover .animation {
+        transition: width 1s ease-in-out; 
+        width: 30%;
+        background-color: #99E2D0  ;      
+    }
+
+    &:hover .fa-circle-check {
+        transition: transform 1s ease;
+        transform: rotate(360deg) ;
+        opacity: 1;
+    }
+
+    &:hover .card_menu {
+        border-radius: 20px 20px 20px 20px;
+    }
+}
+
+@for $i from 1 through 10 {
+    .container_card_menu:nth-child(#{$i}n) {
+        animation-delay: #{$i * 0.3}s;
+    }
+
+}
+
+
+.container_card_menu {
+    
+    animation: slidesequence 1s forwards;
+
+}
+
+@keyframes slidesequence {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+
+
+
+
+
+.card_menu {
+    @include Card-menu;
+    border-radius: 20px;
+    flex-direction: column;
+
+}
+
+.animation {
+
+    width: 0%;
+    max-width: 80px;
+    height: 70px;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    border-radius: 0 20px 20px 0;
+    transform: translateY(-9px);
+    
+
+}
+
+
+.fa-circle-check {
+    opacity: 0;
+    color: $white;
+    font-size: 20px;
+}
+
+
+
+
+
+.composition_et_prix {
+    width: 100%;
+    height: 30px;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    
+}
+
+.titre_plat {
+    @include Font-size-medium;
+
+}
+
+.composition {
+    @include Font-size-medium;
+    height: 30px;
+    width: 90%;
+    max-width: 300px;
+
+
+    white-space:nowrap ;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+
+    
+}
+
+.price {
+    @include Font-size-medium;
+    margin: 0 5%;
+
+}
+
+
+
+/* PLATS */
+
+
+.container_plats {
+    margin-bottom: 50px;
+
+
+}
+
+
+.bouton_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bouton_commander {
+    width: 55%;
+    max-width: 300px;
+}
+
+
+
+
+/* DESSERTS */
+
+
+.container_desserts {
+    margin-bottom: 50px;
+
+
+}
+
+/* FOOTER */ 
+
+.body_page {
+    background-color: $Softgrey;
+}

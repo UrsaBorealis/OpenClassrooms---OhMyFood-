@@ -1,0 +1,195 @@
+@mixin  CSSreset {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+    
+    ul {
+        list-style-type: none;
+    }
+
+    body {
+        max-width: 1400px;
+        margin: auto;
+
+        
+    }
+    
+}
+
+
+@mixin btn-gradient($bnt-gradient:rgb(157,90,220) ) {
+    background-color: $bnt-gradient;
+}
+
+@mixin Logo-sizing {
+    font-family: "shrikhand";
+    font-size: 30px;
+    font-weight: 500;
+    
+}
+
+@mixin Logo-sizing-pages {
+    
+}
+
+/* COLOR & GRADIENT */
+
+
+@mixin Gradient_kit {
+    background: rgb(159,90,220);
+    background: -moz-linear-gradient(347deg, rgba(159,90,220,1) 0%, rgba(241,112,217,1) 100%);
+    background: -webkit-linear-gradient(347deg, rgba(159,90,220,1) 0%, rgba(241,112,217,1) 100%);
+    background: linear-gradient(347deg, rgba(159,90,220,1) 0%, rgba(241,112,217,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9f5adc",endColorstr="#f170d9",GradientType=1); 
+    
+}
+
+
+
+
+/* FONT SIZE */
+
+@mixin Font-size-small($small: 10px) {
+    font-family: $font-primary;
+    font-size: $small;
+}
+
+@mixin Font-size-medium($medium: 16px) {
+    font-family: $font-primary;
+    font-size: $medium;
+}
+
+@mixin Font-size-big($big: 20px) {
+    font-family: $font-primary;
+    font-size: $big;
+}
+
+@mixin Font-size-very-big($vbig: 25px) {
+    font-family: $font-primary;
+    font-size: $vbig;
+    font-weight: 600px;
+}
+
+
+
+
+/* Bouton & Card Shaping */
+
+@mixin Box-sizing($headerheight: 70px ) {
+    height: $headerheight;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+@mixin Bouton {
+    width: 70%;
+    max-width: 500px;
+    height: 50px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(9, 10, 10, 0.7) 0px 10px 10px -10px;
+    box-shadow: inset rgba(9, 10, 10, 0.2) 0px -10px 10px -10px;
+      
+}
+
+
+@mixin Card-li {
+    width: 90%;
+    height: 70px;
+    padding-right: 10%;
+    padding-left: 10%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: $shadow;
+    background-color: $Softgrey;
+    
+}
+
+
+@mixin Card-restaurant {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0px 20px;
+    margin-bottom: 0px;
+    background-color: $white;
+    border-radius: 0 0 20px 20px;
+    
+}
+
+@mixin Card-menu {
+    width: 100%;
+    height: 70px;
+    padding: 0px 0px 5px 10px;
+    margin-bottom: 5px;
+    border-radius: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: $Softgrey;
+    
+}
+
+
+
+/* Magnet */
+
+@mixin number-shape {
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $purple;
+    position: relative;
+    top: 23px;
+    left: 15px;
+}
+
+
+@mixin Nouveau {
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transform: translateY(30%);
+    left: 60%;
+    color: hsl(165, 69%, 35%);
+    background-color: hsl(165, 56%, 74%);
+
+}
+
+/* Picture Treatment */
+
+@mixin Picture-Treatment {
+    height: 190px;
+    object-fit: cover;
+    object-position: 0% 62%;
+    border-radius: 20px 20px 0 0;    
+}
+
+
+/* OVER EFFECTS */
+
+@mixin over-bouton {
+    filter: brightness(110%);
+    box-shadow: rgba(33, 35, 38, 0.3) 0px 6px 6px 0px;
+}
