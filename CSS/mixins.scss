@@ -84,11 +84,9 @@
 @mixin Card-li {
     width: 90%;
     height: 70px;
-    padding-right: 10%;
-    padding-left: 10%;
     border-radius: 20px;
     display: flex;
-    justify-content: flex-start;
+    justify-content:center;
     align-items: center;
     box-shadow: $shadow;
     background-color: $Softgrey;

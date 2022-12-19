@@ -76,7 +76,7 @@ $shadow: rgba(33, 35, 38, 0.3) 0px 3px 5px 0px;
 
 
 .index {
-    animation: disappear 14s ;
+    animation: disappear 4s ;
     opacity: 1;
 }
 
@@ -110,7 +110,7 @@ $shadow: rgba(33, 35, 38, 0.3) 0px 3px 5px 0px;
     @include Logo-sizing;
     font-size: 50px;
     position: relative;
-    animation: slide_up 13s forwards;
+    animation: slide_up 4s forwards;
 
     .letters {
 
@@ -145,7 +145,7 @@ $shadow: rgba(33, 35, 38, 0.3) 0px 3px 5px 0px;
     font-size: 50px;
     opacity: 0;
     animation: spoon 3s cubic-bezier(.17,.84,.38,1.09) infinite;
-    animation-iteration-count: 3;
+    animation-iteration-count: 1;
 
 }
 
@@ -154,9 +154,9 @@ $shadow: rgba(33, 35, 38, 0.3) 0px 3px 5px 0px;
     font-size: 50px;
     opacity: 0;
     animation: fire 3s cubic-bezier(.17,.84,.38,1.09) infinite;
-    animation-iteration-count: 3;
+    animation-iteration-count: 1;
     animation-delay: 1s;
-    animation-duration: 3s;
+    animation-duration: 1s;
 
 }
 
@@ -165,9 +165,9 @@ $shadow: rgba(33, 35, 38, 0.3) 0px 3px 5px 0px;
     font-size: 50px;
     opacity: 0;
     animation: pepper 3s cubic-bezier(.17,.84,.38,1.09) infinite;
-    animation-iteration-count: 3;
+    animation-iteration-count: 1;
     animation-delay: 2s;
-    animation-duration: 3s;
+    animation-duration: 1s;
 
 }
 
@@ -268,7 +268,7 @@ $shadow: rgba(33, 35, 38, 0.3) 0px 3px 5px 0px;
 
     opacity: 0;
     animation: loader1 1s ease-in-out infinite;
-    animation-iteration-count: 3;
+    animation-iteration-count: 1;
     animation-duration: 3s;
 }
 
@@ -281,7 +281,7 @@ $shadow: rgba(33, 35, 38, 0.3) 0px 3px 5px 0px;
 
     opacity: 0;
     animation: loader2 1s ease-in-out infinite;
-    animation-iteration-count: 3;
+    animation-iteration-count: 1;
     animation-delay: 1s;
     animation-duration: 3s;
 }
@@ -295,7 +295,7 @@ $shadow: rgba(33, 35, 38, 0.3) 0px 3px 5px 0px;
 
     opacity: 0;
     animation: loader3 1s ease-in-out infinite;
-    animation-iteration-count: 3;
+    animation-iteration-count: 1;
     animation-delay: 2s;
     animation-duration: 3s;
 }
@@ -532,6 +532,7 @@ $shadow: rgba(33, 35, 38, 0.3) 0px 3px 5px 0px;
 
             .fonction__container__card__description {
                 @include Card-li;
+                max-width: 343px;
 
                 &:hover {
                     cursor: pointer;
@@ -551,6 +552,7 @@ $shadow: rgba(33, 35, 38, 0.3) 0px 3px 5px 0px;
     }
 
 }
+
 
 
 
@@ -614,14 +616,31 @@ $shadow: rgba(33, 35, 38, 0.3) 0px 3px 5px 0px;
                 @include over-bouton;
             }
 
-
+            
         }
 
     }
 
 }
 
-.card_restaurant > img {
+
+@media (min-width: 1220px) {
+
+    .container__restaurant {
+
+        .container__restaurant__card {
+
+            .card_restaurant {
+                min-width: 550px;
+            }
+
+        }
+
+    } 
+
+}
+
+.img_restaurant {
     @include Picture-Treatment;
     width: 100%;
         
@@ -645,7 +664,6 @@ $shadow: rgba(33, 35, 38, 0.3) 0px 3px 5px 0px;
 .restaurant_description {
 
     &:hover .img_restaurant {
-
         @include over-bouton;
     }
 }
@@ -702,7 +720,7 @@ $shadow: rgba(33, 35, 38, 0.3) 0px 3px 5px 0px;
 .liked-heart {
     position: absolute;
     font-size: 25px;
-    // right: 10%;
+
        
 }
 
@@ -710,7 +728,7 @@ $shadow: rgba(33, 35, 38, 0.3) 0px 3px 5px 0px;
     opacity: 0;
     position: absolute;
     font-size: 25px;
-    // right: 10%;
+
              
 }
 
@@ -765,7 +783,25 @@ ul li i {
     margin-right: 10px;
 }
 
+@media (min-width: 820px) {
+    footer {
 
+        .logo_footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+    }
+
+}
 
 
 

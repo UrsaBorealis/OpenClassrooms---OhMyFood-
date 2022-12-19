@@ -40,7 +40,7 @@ body {
 /* Background */
 /* LOADER */
 .index {
-  animation: disappear 14s;
+  animation: disappear 4s;
   opacity: 1;
 }
 
@@ -69,7 +69,7 @@ body {
   font-weight: 500;
   font-size: 50px;
   position: relative;
-  animation: slide_up 13s forwards;
+  animation: slide_up 4s forwards;
 }
 .loader .letters {
   width: 200px;
@@ -95,7 +95,7 @@ body {
   font-size: 50px;
   opacity: 0;
   animation: spoon 3s cubic-bezier(0.17, 0.84, 0.38, 1.09) infinite;
-  animation-iteration-count: 3;
+  animation-iteration-count: 1;
 }
 
 .fa-fire {
@@ -103,9 +103,9 @@ body {
   font-size: 50px;
   opacity: 0;
   animation: fire 3s cubic-bezier(0.17, 0.84, 0.38, 1.09) infinite;
-  animation-iteration-count: 3;
+  animation-iteration-count: 1;
   animation-delay: 1s;
-  animation-duration: 3s;
+  animation-duration: 1s;
 }
 
 .fa-pepper-hot {
@@ -113,9 +113,9 @@ body {
   font-size: 50px;
   opacity: 0;
   animation: pepper 3s cubic-bezier(0.17, 0.84, 0.38, 1.09) infinite;
-  animation-iteration-count: 3;
+  animation-iteration-count: 1;
   animation-delay: 2s;
-  animation-duration: 3s;
+  animation-duration: 1s;
 }
 
 @keyframes spoon {
@@ -171,7 +171,7 @@ body {
   color: transparent;
   opacity: 0;
   animation: loader1 1s ease-in-out infinite;
-  animation-iteration-count: 3;
+  animation-iteration-count: 1;
   animation-duration: 3s;
 }
 
@@ -183,7 +183,7 @@ body {
   color: transparent;
   opacity: 0;
   animation: loader2 1s ease-in-out infinite;
-  animation-iteration-count: 3;
+  animation-iteration-count: 1;
   animation-delay: 1s;
   animation-duration: 3s;
 }
@@ -196,7 +196,7 @@ body {
   color: transparent;
   opacity: 0;
   animation: loader3 1s ease-in-out infinite;
-  animation-iteration-count: 3;
+  animation-iteration-count: 1;
   animation-delay: 2s;
   animation-duration: 3s;
 }
@@ -408,14 +408,13 @@ body {
 .fonction .fontion__container .fonction__container__card .fonction__container__card__description {
   width: 90%;
   height: 70px;
-  padding-right: 10%;
-  padding-left: 10%;
   border-radius: 20px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   box-shadow: rgba(33, 35, 38, 0.3) 0px 3px 5px 0px;
   background-color: hsl(0deg, 0%, 97%);
+  max-width: 343px;
 }
 .fonction .fontion__container .fonction__container__card .fonction__container__card__description:hover {
   cursor: pointer;
@@ -491,7 +490,12 @@ body {
   cursor: pointer;
 }
 
-.card_restaurant > img {
+@media (min-width: 1220px) {
+  .container__restaurant .container__restaurant__card .card_restaurant {
+    min-width: 550px;
+  }
+}
+.img_restaurant {
   height: 190px;
   object-fit: cover;
   object-position: 0% 62%;
@@ -614,6 +618,18 @@ ul li i {
   margin-right: 10px;
 }
 
+@media (min-width: 820px) {
+  footer .logo_footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 /* PAGE RESTAURANTS */
 .header_page_2 {
   height: 70px;
