@@ -165,10 +165,9 @@ body {
 }
 .oh {
   position: absolute;
-  background-image: linear-gradient(300deg, rgb(153, 226, 208) 0%, rgb(255, 121, 218) 100%);
   background-size: 400%;
   background-clip: text;
-  color: transparent;
+  color: #9356DC;
   opacity: 0;
   animation: loader1 1s ease-in-out infinite;
   animation-iteration-count: 1;
@@ -177,10 +176,9 @@ body {
 
 .my {
   position: absolute;
-  background-image: linear-gradient(300deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   background-size: 400%;
   background-clip: text;
-  color: transparent;
+  color: #9356DC;
   opacity: 0;
   animation: loader2 1s ease-in-out infinite;
   animation-iteration-count: 1;
@@ -190,10 +188,9 @@ body {
 
 .food {
   position: absolute;
-  background-image: linear-gradient(17deg, rgb(153, 226, 208) 0%, rgb(162, 97, 240) 100%);
   background-size: 600%;
   background-clip: text;
-  color: transparent;
+  color: #9356DC;
   opacity: 0;
   animation: loader3 1s ease-in-out infinite;
   animation-iteration-count: 1;

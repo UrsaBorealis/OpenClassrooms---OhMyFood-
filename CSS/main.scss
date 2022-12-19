@@ -261,10 +261,10 @@ $shadow: rgba(33, 35, 38, 0.3) 0px 3px 5px 0px;
 
 .oh {
     position: absolute;
-    background-image: $gradientloader1;
+    // background-image: $gradientloader1;
     background-size: 400%;
     background-clip: text;
-    color: transparent;
+    color: $purple;
 
     opacity: 0;
     animation: loader1 1s ease-in-out infinite;
@@ -274,10 +274,10 @@ $shadow: rgba(33, 35, 38, 0.3) 0px 3px 5px 0px;
 
 .my {
     position: absolute;
-    background-image: $gradientloader2;
+    // background-image: $gradientloader2;
     background-size: 400%;
     background-clip: text;
-    color: transparent;
+    color: $purple;
 
     opacity: 0;
     animation: loader2 1s ease-in-out infinite;
@@ -288,10 +288,10 @@ $shadow: rgba(33, 35, 38, 0.3) 0px 3px 5px 0px;
 
 .food {
     position: absolute;
-    background-image: $gradientloader3;
+    // background-image: $gradientloader3;
     background-size: 600%;
     background-clip: text;
-    color: transparent;
+    color: $purple;
 
     opacity: 0;
     animation: loader3 1s ease-in-out infinite;
